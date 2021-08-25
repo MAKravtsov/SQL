@@ -1,12 +1,12 @@
--- Продукты
+-- РџСЂРѕРґСѓРєС‚С‹
 DECLARE @Products TABLE (ID INT, Name NVARCHAR(100))
-INSERT INTO @Products VALUES (1, 'Помидор'), (2, 'Хлеб'), (3, 'Морковь'), (4, 'Вода')
+INSERT INTO @Products VALUES (1, 'РџРѕРјРёРґРѕСЂ'), (2, 'РҐР»РµР±'), (3, 'РњРѕСЂРєРѕРІСЊ'), (4, 'Р’РѕРґР°')
 	
--- Категории
+-- РљР°С‚РµРіРѕСЂРёРё
 DECLARE @Categories TABLE (ID INT, Name NVARCHAR(100))
-INSERT INTO @Categories VALUES (1, 'Овощи'), (2, 'Мучное'), (3, 'Красный')
+INSERT INTO @Categories VALUES (1, 'РћРІРѕС‰Рё'), (2, 'РњСѓС‡РЅРѕРµ'), (3, 'РљСЂР°СЃРЅС‹Р№')
 
--- Связь "многие ко многим" осуществляется с помощью промежуточной таблицы
+-- РЎРІСЏР·СЊ "РјРЅРѕРіРёРµ РєРѕ РјРЅРѕРіРёРј" РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ СЃ РїРѕРјРѕС‰СЊСЋ РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅРѕР№ С‚Р°Р±Р»РёС†С‹
 DECLARE @ProductCategories TABLE (ProductId INT, CategoryId INT NULL)
 INSERT INTO @ProductCategories VALUES (1, 1), (1, 3), (2, 2), (3, 1)
 
